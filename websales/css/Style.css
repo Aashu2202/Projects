@@ -1,0 +1,358 @@
+:root {
+    /*colors*/
+    --primarycolor: #4d40af;
+    --secondarycolor: #6f6f6f;
+    --whitecolor: white;
+    --bgcolor: #e7e6e9;
+    --orange-color: #FFBC4D;
+    --shadow-color:#f3f3f3;
+
+    /* font size*/
+    --font1: 65px;
+    --font2: 38px;
+    --font3: 30px;
+    --font4: 25px;
+    --font5: 20px;
+    --font6: 17px;
+    --font7: 15px;
+
+    /*spacing*/
+    --space100: 100px;
+    --space90: 90px;
+    --space70: 70px;
+    --space50: 50px;
+    --space45: 45px;
+    --space40: 40px;
+    --space30: 30px;
+    --space25: 25px;
+    --space20: 20px;
+    --space15: 15px;
+    --space10: 10px;
+}
+
+/*font-family import*/
+@font-face {
+    font-family: blackfont;
+    src: url(font-family/Roboto-Black.ttf);
+    font-weight: 800;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: boldfont;
+    src: url(font-family/Roboto-Bold.ttf);
+    font-weight: 600;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: mediumfont;
+    src: url(font-family/Roboto-Medium.ttf);
+    font-weight: 500;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: regularfont;
+    src: url(font-family/Roboto-Regular.ttf);
+    font-weight: 500;
+    font-style: normal;
+}
+
+
+/*heading and paragraph*/
+h1 {
+    font-family: mediumfont;
+    font-size: var(--font1);
+}
+
+h2 {
+    font-family: boldfont;
+    font-size: var(--font2);
+}
+
+h3 {
+    font-family: regularfont;
+    font-size: var(--font3);
+}
+
+h4 {
+    font-family: regularfont;
+    font-size: var(--font4);
+}
+
+h5 {
+    font-family: regularfont;
+    font-size: var(--font5);
+}
+
+h6 {
+    font-family: regularfont;
+    font-size: var(--font6);
+}
+
+p {
+    font-family: regularfont;
+    font-size: var(--font7);
+}
+
+/*color classes*/
+
+.text-orange {
+    color: var(--orange-color);
+}
+
+.text-white {
+    color: var(--whitecolor);
+}
+
+.text-blue {
+    color: var(--primarycolor);
+}
+
+.text-secondary {
+    color: var(--secondarycolor);
+}
+
+.background-blue {
+    background-color: var(--primarycolor);
+}
+
+/*button styling*/
+.btn {
+    font-family: mediumfont;
+    font-size: var(--font7);
+    border: 1;
+    border-color: var(--primarycolor);
+}
+
+.btn-lg {
+    height: 45px;
+    padding: 0px var(--space25);
+    border-radius: 10px;
+}
+
+.btn-sm {
+    height: 40px;
+    padding: 0px var(--space15);
+    border-radius: 10px;
+}
+
+.btn-primary {
+    color: var(--primarycolor);
+    background-color: var(--whitecolor);
+}
+
+.btn-secondary {
+    color: var(--whitecolor);
+    background-color: var(--primarycolor);
+}
+
+/*Spacing*/
+section {
+    margin-top: var(--space90);
+}
+
+/*shadow*/
+.shadow-effect {
+    box-shadow: 10px 10px 15px var(--shadow-color);
+}
+
+/*link style*/
+
+li {
+    list-style-type: none;
+    display: inline-block;
+}
+
+a {
+    font-family: mediumfont;
+    font-size: var(--font6);
+    text-decoration: none;
+    color: var(--secondarycolor);
+}
+
+/*body*/
+
+
+/*navigation-bar*/
+.header a:hover {
+    color: var(--primarycolor);
+    font-weight: bold;
+}
+
+/*banner section style*/
+.banner-section b{
+    font-weight: 500;
+}
+.line-styling {
+    position: relative; /* when we declare position relative then we gave top bottom margin from its actuall position*/
+    color: var(--primarycolor);
+    display: inline-block;
+}
+
+.line-styling::before {
+    content: "";  /*write any add own text*/
+    position: absolute; /*relative to its parent*/
+    bottom: 20%;
+    left: 0;
+    width: 100%;
+    height: 8px;
+    background-color: var(--orange-color);
+    z-index: 1;
+}
+
+.text-styling {
+    color: var(--primarycolor);
+    position: relative;
+    z-index: 2;
+}
+
+/*our working partner & <hr>-line*/
+.hr-section {
+    position: relative;
+    z-index: 1;
+}
+
+.hr-tag {
+    padding-top: var(--space30);
+    width: 20%;
+    position: absolute;
+    z-index: 2;
+    color: var(--primarycolor);
+}
+
+/*section working process*/
+
+.rounded-circle {
+    /*bootstrap by default  property*/
+    border: 1px solid var(--secondarycolor);
+    background-color: var(--whitecolor);
+    padding-top: 17px;
+    height: 80px;
+    width: 80px;
+}
+
+.working-process-card h3 {
+    color: var(--primarycolor);
+}
+
+.working-process-card {
+    margin-top: var(--space20);
+}
+
+.working-process-card :hover {
+    background-color: var(--primarycolor);
+    color: var(--whitecolor);
+}
+
+.working-process-card:hover h3 {
+    color: var(--whitecolor);
+}
+
+.working-process-card:hover .rounded-circle {
+    background-color: var(--whitecolor);
+}
+
+.working-process-card:hover img {
+    background-color: var(--whitecolor);
+}
+
+.working-process-card:hover button {
+    background-color: var(--whitecolor);
+    color: var(--primarycolor);
+}
+
+/*grow their bussiness section*/
+.active-users {
+    background-color: var(--bgcolor);
+    padding: var(--space70) 0px;
+}
+
+/*grow your bussiness */
+
+/*aboutus*/
+.about-us img{
+    border-radius: 10px;
+}
+/*read more blog*/
+.blog-header {
+    padding-bottom: var(--space30);
+}
+
+.read-blog .card-body {
+    padding: var(--space15);
+}
+
+.read-blog .card-body h4 {
+    text-decoration: underline;
+    text-decoration-color: var(--primarycolor);
+    padding-bottom: var(--space10);
+}
+
+.card-body .bg-body h6 {
+    background-color: var(--bgcolor);
+    border-radius: 10px;
+}
+
+.blog-img img {
+    border-radius: 50%;
+}
+
+/*Top rating section*/
+.rating-section {
+    background-color: var(--primarycolor);
+}
+
+.top-rating {
+    padding: var(--space45) 0px;
+}
+
+.rating-section hr {
+    margin-top: 65px;
+}
+
+/*Review section*/
+.card {
+    border: 0;
+}
+
+/*footer-section*/
+.footer {
+    background-color: var(--primarycolor);
+}
+
+.input-group-text {
+    border-radius: 0px var(--space10) var(--space10) 0px;
+    background-color: var(--bgcolor);
+}
+
+.social-links li a {
+    color: var(--secondarycolor);
+}
+
+.footer-navbar a {
+    color: var(--whitecolor);
+}
+
+.footer-links a:hover {
+    color: var(--orange-color)
+}
+
+input[type="text"]::placeholder {
+    text-align: center;
+    color: var(--secondarycolor);
+}
+
+.subscribe {
+    padding: var(--space100) 0px;
+}
+
+.footer-links img {
+    margin-bottom: var(--space50);
+}
+
+.footer-links .footer-navbar {
+    margin-top: var(--space70);
+    padding-bottom: var(--space50);
+}
